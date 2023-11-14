@@ -269,5 +269,14 @@
     "columns": {
       "prompt": "content"
     }
-  }
+  },
+  "metricsubs": {
+    "hf_hub_url": "metricv/metricsubs-chunktranslate",
+    "columns": {
+      "prompt": "system",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  } 
 }

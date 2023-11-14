@@ -313,6 +313,50 @@ register_template(
 
 
 r"""
+Supports: https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat
+          https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat
+"""
+register_template(
+    name="baichuan2-modified",
+    prefix=[
+        "{{system}}"
+    ],
+    prompt=[
+        {"token": "<reserved_106>"}, # user token
+        "{{prompt}}",
+        "\n\n",
+        "{{query}}",
+        {"token": "<reserved_107>"}  # assistant token
+    ],
+    system="",
+    sep=[],
+    efficient_eos=True
+)
+
+
+r"""
+Supports: https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat
+          https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat
+"""
+register_template(
+    name="baichuan2-modified",
+    prefix=[
+        "{{system}}"
+    ],
+    prompt=[
+        {"token": "<reserved_106>"}, # user token
+        "{{prompt}}",
+        "\n\n",
+        "{{query}}",
+        {"token": "<reserved_107>"}  # assistant token
+    ],
+    system="",
+    sep=[],
+    efficient_eos=True
+)
+
+
+r"""
 Supports: https://huggingface.co/BelleGroup/BELLE-LLaMA-EXT-13B
 """
 register_template(
